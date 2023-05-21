@@ -1,0 +1,84 @@
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	color: #FEF5E7 ;
+}
+body {
+	background-image: url("https://64.media.tumblr.com/75364be3824c44d04dfd7effd9fcca31/tumblr_o8bmp327ud1uh17apo1_1280.png");
+}
+.tab {
+  overflow: hidden;
+  border: 1px solid #FEF9E7;
+  background-color: #E59866;
+  border-radius: 5px;
+  margin-top: 3%;
+}
+.tab button {
+  background-color: #F5CBA7;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 16px 16px;
+  transition: 0.3s;
+  font-family: monospace;
+  font-size: 150%;
+  border-radius: 20px;
+}
+.tab button:hover {
+  background-color: #DC7633;
+  opacity: .5;
+}
+.tab button.active {
+  background-color: #DC7633;
+}
+.tabcontent1 {
+  padding: 6px 12px;
+  border: 1px solid #FEF9E7;
+  border-radius: 5px;
+  border-top: none;
+  background-color: #FDEBD0;
+  margin-bottom: 3%;
+}
+.tabcontent2 {
+  padding: 6px 12px;
+  border: 1px solid #FEF9E7;
+  border-radius: 5px;
+  border-top: none;
+  background-color:  #FAD7A0;
+  margin-bottom: 3%;
+}
+.tabcontent3 {
+  padding: 6px 12px;
+  border: 1px solid #FEF9E7;
+  border-radius: 5px;
+  border-top: none;
+  background-color: #F5CBA7;
+  margin-bottom: 3%;
+}
+.tabcontent4 {
+  padding: 6px 12px;
+  border: 1px solid #FEF9E7;
+  border-radius: 5px;
+  border-top: none;
+  background-color: #F6DDCC;
+  margin-bottom: 3%;
+}
+.tabcontent5 {
+  padding: 6px 12px;
+  border: 1px solid #FEF9E7;
+  border-radius: 5px;
+  border-top: none;
+  background-color: #EDBB99 ;
+  margin-bottom: 3%;
+}
+p {
+	font-size: 200%;
+	font-family: monospace;
+	text-align: center;
+	color: #78281F;
+}
+hr {
+	border: 3px dotted  gray;
+}

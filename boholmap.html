@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1 style="text-align: center; color: white; font-family: arial">MAP OF BOHOL<h1>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<style>
+.arrow-container {
+  position: relative;
+}
+
+.arrow-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #000000;
+  animation: arrow 1s ease-in-out infinite;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-top: -1%;
+}
+
+@keyframes arrow {
+  0% {
+    left: -15px;
+  }
+  50% {
+    left: -10px;
+  }
+  100% {
+    left: -15px;
+  }
+}
+body {
+	background-color: #566573;
+	}
+img {
+	height: 773px;
+	width: 850px;
+	}
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+</style>
+
+<body>
+<div class="arrow-container">
+ <img src="https://www.researchgate.net/profile/Deborah-Briggs/publication/233909838/figure/fig3/AS:341843721113619@1458513302762/Map-of-the-province-of-Bohol-Philippines-BOHOL-FACTFILE-Total-Population-1-139-130.png" alt="bohol" usemap="#boholmap" class="center"> 
+
+<map name="boholmap">
+  <area shape="poly" coords="405,350,408,320,427,327,447,335,463,339,471,322,473,302,483,302,493,302,502,315,509,330,519,343,526,354,530,364,518,365,505,367,503,374,507,384,499,388,493,392,479,392,473,392,475,402,467,404,463,404,457,416,447,403,431,396,425,392,420,391,417,387,413,387,417,398,422,405,423,416,415,413,409,408,405,398,408,378,406,360,398,339,394,332,401,323,407,318,423,326,442,336,460,342" alt="bohol1" href="danaomap.html">
+</map>
+</div>
+
+</body>
+</html>

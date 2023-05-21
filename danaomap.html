@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Danao Map</title>
+    <style>
+	body {
+	background-color: #FCF3CF;
+	}
+      #map {
+        position: relative;
+      }
+      #map img {
+		height: 768px;
+		width: 1024px;
+		margin-bottom: 15%;
+      }
+      #map .tooltip {
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 5px;
+        display: none;
+        z-index: 9999;
+      }
+	  .center {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  }
+	  p {
+	  font-weight: normal;
+	  }
+	  h3,p {
+	  font-family: arial narrow;
+	  }
+    </style>
+    <script>
+      function showTooltip(e, town) {
+        const tooltip = document.getElementById(`${town}-tooltip`);
+        tooltip.style.display = "block";
+        tooltip.style.left = `${e.pageX}px`;
+        tooltip.style.top = `${e.pageY}px`;
+      }
+
+      function hideTooltip(town) {
+        const tooltip = document.getElementById(`${town}-tooltip`);
+        tooltip.style.display = "none";
+      }
+
+      function showTownMap(town) {
+        const townMap = document.getElementById(`${town}-map`);
+        townMap.style.display = "block";
+      }
+
+      function hideTownMap(town) {
+        const townMap = document.getElementById(`${town}-map`);
+        townMap.style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Map_of_Danao_Bohol.png" alt="Bohol Map" usemap="#bohol-map" class="center" />
+      <map name="bohol-map">
+        <area
+          shape="poly"
+          coords="600,30,620,30,645,33,664,33,683,32,704,32,720,34,732,36,739,56,750,82,758,107,768,130,774,140,754,148,734,155,705,168,677,182,644,196,620,211,596,220,575,229,557,238,559,223,564,201,568,180,574,156,579,129,584,100,590,70,595,49,598,30"
+          href="https://www.philatlas.com/visayas/r07/bohol/danao/san-carlos.html"
+          onmouseover="showTooltip(event, 'town1')"
+          onmouseout="hideTooltip('town1')"
+          onclick="showTownMap('town1')"
+        />
+		<area shape="poly" coords="611,216,629,207,646,200,669,186,695,178,726,162,757,150,773,143,775,154,783,166,793,182,807,204,820,226,833,248,850,274,861,292,871,310,878,322,858,325,834,328,809,331,786,333,762,337,741,341,718,342,700,344,676,348,668,334,659,315,649,296,641,280,632,260,621,240,616,228,610,216" href="https://www.philatlas.com/visayas/r07/bohol/danao/dagohoy.html"
+		onmouseover="showTooltip(event, 'town2')"
+        onmouseout="hideTooltip('town2')"
+        onclick="showTownMap('town2')"
+		/>
+		<area shape="poly" coords="675,348,699,347,730,343,764,338,800,334,837,326,861,326,878,324,890,342,904,362,916,385,930,403,942,425,950,440,928,442,900,444,859,448,826,453,797,455,770,457,740,464,720,468,690,476,674,478,658,481,661,457,663,428,668,400,670,375,672,358,676,348" href="https://www.philatlas.com/visayas/r07/bohol/danao/san-miguel.html"
+		onmouseover="showTooltip(event, 'town3')"
+        onmouseout="hideTooltip('town3')"
+        onclick="showTownMap('town3')"
+		/>
+		<area shape="poly" coords="555,240,564,234,576,230,586,226,598,222,611,216,617,231,624,249,634,266,644,284,650,300,656,313,665,331,674,347,662,348,646,348,622,347,605,344,586,342,563,339,544,334,530,331,520,328,522,316,524,304,526,294,528,281,537,282,546,282,549,266,553,251,554,240" href="https://www.philatlas.com/visayas/r07/bohol/danao/san-miguel.html"
+		onmouseover="showTooltip(event, 'town4')"
+        onmouseout="hideTooltip('town4')"
+        onclick="showTownMap('town4')"
+		/>
+		
+		<area shape="poly" coords="600,376,621,350,615,357,610,354,604,354,598,362,600,370,600,376,593,376,590,373,586,381,580,378,578,386,572,396,565,394,570,406,576,410,570,417,561,412,546,421,545,432,546,436,544,448,551,448,560,452,572,450,580,462,588,456,604,456,616,465,624,464,634,473,644,474,651,474,656,480,660,454,664,424,668,403,670,384,672,365,674,349,656,349,640,348,622,349" href="https://www.philatlas.com/visayas/r07/bohol/danao/remedios.html"
+		onmouseover="showTooltip(event, 'town5')"
+        onmouseout="hideTooltip('town5')"
+        onclick="showTownMap('town5')"
+		/>
+		<area shape="poly" coords="493,324,510,328,529,332,546,333,563,335,574,341,591,343,605,346,618,348,614,350,605,350,598,359,594,365,598,370,596,370,591,368,586,369,580,375,579,383,572,394,564,389,562,402,571,409,566,412,555,414,548,422,547,430,542,422,534,421,535,413,537,406,532,403,524,409,520,406,510,393,503,390,494,392,489,394,485,396,482,400,476,398,469,396,462,396,465,384,472,369,480,356,487,340,490,333,495,324" href="https://www.philatlas.com/visayas/r07/bohol/danao/santa-fe.html"
+		onmouseover="showTooltip(event, 'town6')"
+        onmouseout="hideTooltip('town6')"
+        onclick="showTownMap('town6')"
+		/>
+		<area shape="poly" coords="552,468,554,456,558,453,564,452,572,454,580,459,588,454,594,455,601,452,607,459,616,463,623,465,621,474,630,471,636,476,641,480,654,480,638,504,626,519,618,528,610,534,601,538,594,527,593,509,582,494,569,486,561,482,554,481,553,456" href="https://www.philatlas.com/visayas/r07/bohol/danao/poblacion.html"
+		onmouseover="showTooltip(event, 'town7')"
+        onmouseout="hideTooltip('town7')"
+        onclick="showTownMap('town7')"
+		/>
+		
+		<area shape="poly" coords="536,411,463,397,473,398,481,399,484,404,491,396,508,392,516,400,522,412,528,409,535,405,530,420,542,429,537,434,544,440,543,447,549,448,548,460,552,478,538,488,505,494,467,499,443,499,438,478,440,461,457,464,466,456,458,439,453,430,444,422,456,408,459,400" href="https://www.philatlas.com/visayas/r07/bohol/danao/santo-nino.html"
+		onmouseover="showTooltip(event, 'town8')"
+        onmouseout="hideTooltip('town8')"
+        onclick="showTownMap('town8')"
+		/>
+		
+		<area shape="poly" coords="592,526,562,484,580,493,590,503,591,526,605,538,606,542,599,552,598,576,599,612,606,651,608,675,575,680,546,688,524,693,515,716,506,744,500,756,470,732,451,712,430,694,408,672,393,655,403,628,416,592,434,542,444,510,444,501,466,498,496,496,529,493,552,486" href="https://www.philatlas.com/visayas/r07/bohol/danao/hibale.html"
+		onmouseover="showTooltip(event, 'town9')"
+        onmouseout="hideTooltip('town9')"
+        onclick="showTownMap('town9')"
+		/>
+		
+		<area shape="poly" coords="447,254,460,260,478,272,500,275,521,280,528,283,525,302,523,314,520,328,492,324,474,316,457,308,440,299,427,292,432,280,442,264,446,254" href="https://www.philatlas.com/visayas/r07/bohol/danao/tabok.html"
+		onmouseover="showTooltip(event, 'town10')"
+        onmouseout="hideTooltip('town10')"
+        onclick="showTownMap('town10')"
+		/>
+		
+		<area shape="poly" coords="364,301,382,298,406,294,426,294,446,304,465,312,485,322,492,325,486,341,478,358,468,376,463,392,456,408,444,427,451,431,457,432,459,444,464,453,462,464,449,460,441,458,435,463,426,459,419,454,407,450,399,437,388,423,380,430,372,443,360,446,360,434,353,425,344,419,330,420,326,427,331,405,338,390,347,362,355,337,358,320,366,304" href="https://www.philatlas.com/visayas/r07/bohol/danao/magtangtang.html"
+		onmouseover="showTooltip(event, 'town11')"
+        onmouseout="hideTooltip('town11')"
+        onclick="showTownMap('town11')"
+		/>
+		
+		<area shape="poly" coords="324,432,336,418,344,418,354,425,360,432,359,438,358,444,366,448,374,438,382,434,390,424,397,429,400,440,408,448,417,452,424,458,435,466,438,483,444,500,439,521,431,544,422,570,416,590,408,608,400,633,392,656,378,647,361,632,344,616,320,600,300,598,288,599,280,584,271,574,276,558,288,527,302,488,313,458,324,434" href="https://www.philatlas.com/visayas/r07/bohol/danao/nahud.html"
+		onmouseover="showTooltip(event, 'town12')"
+        onmouseout="hideTooltip('town12')"
+        onclick="showTownMap('town12')"
+		/>
+		
+		<area shape="poly" coords="212,140,234,148,260,162,276,170,302,184,332,197,361,212,384,223,412,238,438,250,444,254,439,268,424,293,402,296,377,302,363,302,323,296,292,291,254,288,215,284,178,280,149,278,136,262,124,247,134,233,149,214,166,194,181,175,199,152,210,140" href="https://www.philatlas.com/visayas/r07/bohol/danao/cabatuan.html"
+		onmouseover="showTooltip(event, 'town13')"
+        onmouseout="hideTooltip('town13')"
+        onclick="showTownMap('town13')"
+		/>
+		
+		<area shape="poly" coords="150,279,182,281,215,285,242,288,278,292,311,296,339,300,363,300,356,323,349,346,344,370,335,392,324,428,331,412,318,426,312,419,296,412,282,395,280,373,279,340,273,328,264,327,254,322,240,323,224,322,210,327,194,334,190,337,178,316,161,294,149,278" href="https://www.philatlas.com/visayas/r07/bohol/danao/carbon.html"
+		onmouseover="showTooltip(event, 'town14')"
+        onmouseout="hideTooltip('town14')"
+        onclick="showTownMap('town14')"
+		/>
+		
+		<area shape="poly" coords="190,335,218,325,240,323,258,323,270,328,280,342,282,362,280,384,288,405,300,415,313,418,322,433,316,450,308,475,296,507,284,534,275,556,270,573,237,573,221,572,202,566,203,533,203,489,202,442,204,407,206,371,206,355,197,342,190,338" href="https://www.philatlas.com/visayas/r07/bohol/danao/taming.html"
+		onmouseover="showTooltip(event, 'town15')"
+        onmouseout="hideTooltip('town15')"
+        onclick="showTownMap('town15')"
+		/>
+		
+		<area shape="poly" coords="238,654,206,571,229,574,239,590,252,606,263,626,272,652,288,684,296,705,305,733,314,752,300,743,285,740,267,732,248,726,233,720,224,700,216,683,205,663,198,648,190,637,193,612,197,590,202,577,205,571,217,570,228,572" href="https://www.philatlas.com/visayas/r07/bohol/danao/villa-anunciado.html"
+		onmouseover="showTooltip(event, 'town16')"
+        onmouseout="hideTooltip('town16')"
+        onclick="showTownMap('town16')"
+		/>
+		
+		<area shape="poly" coords="599,558,599,550,605,544,610,534,619,522,633,508,648,494,658,483,681,477,708,472,733,466,761,461,782,458,785,472,781,492,776,508,777,524,792,546,805,557,812,562,790,570,762,582,739,596,734,608,710,608,682,605,641,607,613,605,602,605,599,588,598,564" href="https://www.philatlas.com/visayas/r07/bohol/danao/concepcion.html"
+		onmouseover="showTooltip(event, 'town17')"
+        onmouseout="hideTooltip('town17')"
+        onclick="showTownMap('town17')"
+		/>
+      </map>
+
+      <div id="town1-tooltip" class="tooltip">
+        <h3>SAN CARLOS<h3>
+        <p>Population: 1,318</p>
+        <p>Number of households: 254</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/san-carlos.html">https://bit.ly/40i7YY6</a>
+      </div>
+	  
+	 <div id="town2-tooltip" class="tooltip">
+        <h3>DAGOHOY<h3>
+        <p>Population: 810</p>
+        <p>Number of households: 143</p>
+        <P>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/dagohoy.html">https://bit.ly/3JPxJrQ</a>
+      </div>
+	  
+	  <div id="town3-tooltip" class="tooltip">
+        <h3>SAN MIGUEL<h3>
+        <p>Population: 528</p>
+        <p>Number of households: 125</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/san-miguel.html">https://bit.ly/3lIqudf</a>
+      </div>
+	  
+	  <div id="town4-tooltip" class="tooltip">
+        <h3>CANTUBOD<h3>
+        <p>Population: 1,112</p>
+        <p>Number of households: 228</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/cantubod.html">https://bit.ly/3lDiSZJ</a>
+      </div>
+	  
+	 <div id="town5-tooltip" class="tooltip">
+        <h3>REMEDIOS<h3>
+        <p>Population: 1,554</p>
+        <p>Number of households: 285</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/remedios.html">https://bit.ly/3nnR2RH</a>
+      </div>
+	  
+	 <div id="town6-tooltip" class="tooltip">
+        <h3>SANTA FE<h3>
+        <p>Population: 644</p>
+        <p>Number of households: 123</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/santa-fe.html">https://bit.ly/3JDYFKY</a>
+     </div>
+	  
+	 <div id="town7-tooltip" class="tooltip">
+        <h3>POBLACION<h3>
+        <p>Population: 3,622</p>
+        <p>Number of households: 753</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/poblacion.html">https://bit.ly/3LTfh4q</a>
+    </div>
+	
+	<div id="town8-tooltip" class="tooltip">
+        <h3>SANTO NIÑO<h3>
+        <p>Population: 892</p>
+        <p>Number of households: 157</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/santo-nino.html">https://bit.ly/3nkt9KO</a>
+    </div>
+	
+	<div id="town9-tooltip" class="tooltip">
+        <h3>HIBALE<h3>
+        <p>Population: 874</p>
+        <p>Number of households: 200</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/hibale.html">https://bit.ly/3FSoExq</a>
+    </div>
+	
+	<div id="town10-tooltip" class="tooltip">
+        <h3>TABOK<h3>
+        <p>Population: 1,209</p>
+        <p>Number of households: 202</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/tabok.html">https://bit.ly/3nrruTq</a>
+    </div>
+	
+	<div id="town11-tooltip" class="tooltip">
+        <h3>MAGTANGTANG<h3>
+        <p>Population: 1,284</p>
+        <p>Number of households: 265</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/magtangtang.html">https://bit.ly/3LSAviJ</a>
+    </div>
+	
+	<div id="town12-tooltip" class="tooltip">
+        <h3>NAHUD<h3>
+        <p>Population: 1,196</p>
+        <p>Number of households: 203</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/nahud.html">https://bit.ly/40TSfyH</a>
+    </div>
+	
+	<div id="town13-tooltip" class="tooltip">
+        <h3>CABATUAN<h3>
+        <p>Population: 1,846</p>
+        <p>Number of households: 344</p>
+       <p>Official Website:  <a href="https://www.philatlas.com/visayas/r07/bohol/danao/cabatuan.html">https://bit.ly/3ZpKMGs</a>
+    </div>
+	
+	<div id="town14-tooltip" class="tooltip">
+        <h3>CARBON<h3>
+        <p>Population: 426</p>
+        <p>Number of households: 87</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/carbon.html">https://bit.ly/3JOAIAM</a>
+    </div>
+	
+	<div id="town15-tooltip" class="tooltip">
+        <h3>TAMING<h3>
+        <p>Population: 1,035</p>
+        <p>Number of households: 188</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/taming.html">https://bit.ly/3JNXKba</a>
+    </div>
+	
+	<div id="town16-tooltip" class="tooltip">
+        <h3>VILLA ANUNCIADO<h3>
+        <p>Population: 205</p>
+        <p>Number of households: 31</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/villa-anunciado.html">https://bit.ly/3JOdISD</a>
+    </div>
+	
+	<div id="town17-tooltip" class="tooltip">
+        <h3>CONCEPCION<h3>
+        <p>Population: 1,690</p>
+        <p>Number of households: 332</p>
+        <p>Official Website: <a href="https://www.philatlas.com/visayas/r07/bohol/danao/concepcion.html">https://bit.ly/3nlvvZQ</a>
+    </div>
+  </body>
+</html>

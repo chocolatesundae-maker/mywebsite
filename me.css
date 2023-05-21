@@ -1,0 +1,57 @@
+body {
+	background-image: url("https://img.freepik.com/premium-vector/pink-aesthetic-background-with-line_462979-554.jpg");
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+
+img {
+	max-width: 50%;
+	height: auto;
+}
+
+.prev, .next {
+	font-size: 3rem;
+	color: white;
+	text-decoration: none;
+	padding: 1rem;
+}
+
+.prev:hover {
+	color: #ff69b4;
+}
+.next:hover{
+	color: #EC7063;
+}
+.next:active {
+	color: #ABB2B9;
+}
+.prev:active {
+	color: #ABB2B9;
+}
+
+h1 {
+	text-align: center;
+	font-family: monospace;
+	color: white;
+	margin-top: -1em;
+}
+#hey {
+		margin-left: 20%;
+		margin-right: 20%;
+		border: 5px #FADBD8;
+		background-color: #F5B7B1;
+		padding: 50px;
+		border-radius: 10px;
+		border-style: groove;
+		}
+p {
+	text-align: center;
+	font-family: monospace;
+	color: white;
+	font-size: 130%;
+}
